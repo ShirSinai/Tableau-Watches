@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Dashboard 📊✨</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: slideDown 1s ease-out;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #333;
+        }
+        header p {
+            color: #666;
+            font-size: 1.2em;
+        }
+        nav {
+            background: #fff;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #6e8efb;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #a777e3;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in;
+        }
+        .section h2 {
+            color: #6e8efb;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .tableau-embed {
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #a777e3, #6e8efb);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite;
+        }
+        .tableau-embed iframe {
+            border: none;
+            width: 100%;
+            height: 600px;
+            border-radius: 10px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s;
+        }
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+        .stat-card h3 {
+            color: #a777e3;
+            margin: 0 0 10px;
+        }
+        footer {
+            background: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            margin: 0;
+            color: #666;
+        }
+
+        /* Animations */
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            .tableau-embed iframe { height: 400px; }
+            .stat-card { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Analytics Hub 📈🚀</h1>
+        <p>Explore insights and trends with our interactive Tableau dashboards! 🌟</p>
+    </header>
+    <nav>
+        <a href="#home">Home 🏠</a>
+        <a href="#dashboards">Dashboards 📊</a>
+        <a href="#insights">Insights 💡</a>
+        <a href="#contact">Contact 📧</a>
+    </nav>
+    <div class="container">
+        <div class="section" id="home">
+            <h2>Welcome to Our Analytics Platform! 😄</h2>
+            <p>Dive into the world of data with our professionally curated Tableau visualizations. Discover trends, make decisions, and have fun exploring! 🎉</p>
+        </div>
+        <div class="section" id="dashboards">
+            <h2>Interactive Tableau Dashboards 📈</h2>
+            <p>Our Tableau dashboards provide real-time insights into key metrics. Explore the embedded dashboard below! 🔍</p>
+            <div class="tableau-embed">
+                <iframe src="https://public.tableau.com/views/HW1SS18/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" title="Tableau Dashboard"></iframe>
+            </div>
+        </div>
+        <div class="section" id="insights">
+            <h2>Key Insights 💡</h2>
+            <p>Here are some quick stats derived from our data analysis:</p>
+            <div class="stats" id="stats-container">
+                <!-- Stats will be populated by JavaScript -->
+            </div>
+        </div>
+        <div class="section" id="contact">
+            <h2>Get in Touch! 📬</h2>
+            <p>Have questions or want to collaborate? Reach out to us at <a href="mailto:info@analyticshub.com">info@analyticshub.com</a>! 😊</p>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 Data Analytics Hub. All rights reserved. Made with ❤️</p>
+    </footer>
+
+    <script>
+        // Sample stats data
+        const statsData = [
+            { title: "Users", value: "10,000+", emoji: "👥" },
+            { title: "Data Points", value: "1M+", emoji: "📍" },
+            { title: "Reports", value: "500+", emoji: "📜" },
+            { title: "Insights", value: "1000+", emoji: "💡" }
+        ];
+
+        // Populate stats cards
+        const statsContainer = document.getElementById('stats-container');
+        statsData.forEach(stat => {
+            const card = document.createElement('div');
+            card.className = 'stat-card';
+            card.innerHTML = `
+                <h3>${stat.title} ${stat.emoji}</h3>
+                <p>${stat.value}</p>
+            `;
+            statsContainer.appendChild(card);
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
